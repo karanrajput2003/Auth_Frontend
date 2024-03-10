@@ -16,7 +16,7 @@ export default function TeacherRegister() {
 
   const onSubmit = (data) => {
     setIsLoading(true);
-    axios.post('http://localhost:8080/api/auth/signup', {
+    axios.post('https://react-auth-api.vercel.app/api/auth/signup', {
       username: data.username,
       email: data.email,
       roles: ["moderator"],
