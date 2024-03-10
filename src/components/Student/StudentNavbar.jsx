@@ -39,12 +39,9 @@ function StudentNavbar() {
   const sendRequest = async () => {
     const res = await axios.get('https://react-auth-api.vercel.app/api/test/user', {
       withCredentials: true
-    }).catch(err => {
-      alert("Login to your account");
-      history("/")
-    });
-    const data = await res.data;
-    return data;
+    }).catch(err => history("/"));
+    // const data = await res.data;
+    return res;
   }
 
   useEffect(() => {
@@ -86,10 +83,10 @@ function StudentNavbar() {
             >
               <div className="px-4 py-3">
                 <span className="block text-sm text-gray-900 dark:text-white">
-                {user && <h1>{user.username}</h1>}
+{/*                 {user && <h1>{user.username}</h1>} */}
                 </span>
                 <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                {user && <h1>{user.email}</h1>}
+{/*                 {user && <h1>{user.email}</h1>} */}
                 </span>
               </div>
               <ul className="py-2" aria-labelledby="user-menu-button">
