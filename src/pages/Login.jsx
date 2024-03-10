@@ -19,7 +19,7 @@ export default function Login() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    await axios.post('http://localhost:8080/api/auth/signin', {
+    await axios.post('https://react-auth-api.vercel.app/api/auth/signin', {
       username: data.username,
       password: data.password
     })
