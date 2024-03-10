@@ -18,7 +18,7 @@ function StudentNavbar() {
 
   const sendlogout = async () => {
     console.log("ll")
-    const res = await axios.post('http://localhost:8080/api/auth/logout',{
+    const res = await axios.post('https://react-auth-api.vercel.app/api/auth/logout',{
       // userId: user.id
     },{
       withCredentials: true
@@ -37,7 +37,7 @@ function StudentNavbar() {
   }
 
   const sendRequest = async () => {
-    const res = await axios.get('http://localhost:8080/api/test/user', {
+    const res = await axios.get('https://react-auth-api.vercel.app/api/test/user', {
       withCredentials: true
     }).catch(err => {
       alert("Login to your account");
