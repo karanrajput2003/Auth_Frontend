@@ -16,7 +16,7 @@ export default function Register() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    await axios.post('http://localhost:8080/api/auth/signup', {
+    await axios.post('https://react-auth-api.vercel.app/api/auth/signup', {
       username: data.username,
       email: data.email,
       roles: ["user"],
