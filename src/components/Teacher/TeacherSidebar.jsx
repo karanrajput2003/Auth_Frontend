@@ -15,7 +15,7 @@ function TeacherSidebar() {
 
    const sendlogout = async () => {
       console.log("ll")
-      const res = await axios.post('http://localhost:8080/api/auth/logout',{
+      const res = await axios.post('https://react-auth-api.vercel.app/api/auth/logout',{
         // userId: user.id
       },{
         withCredentials: true
@@ -36,7 +36,7 @@ function TeacherSidebar() {
    const [teacher, setTeacher] = useState();
    const history = useNavigate();
    const sendRequest = async () => {
-      const res = await axios.get('http://localhost:8080/api/test/mod', {
+      const res = await axios.get('https://react-auth-api.vercel.app/api/test/mod', {
         withCredentials: true
       }).catch(err => {
         history("/")
